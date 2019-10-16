@@ -14,7 +14,7 @@ CREATE TABLE student
 CREATE course 
 (
     cid INT(10)NOT NULL AUTO_INCREMENT,
-    cname CHAR(20)
+    cname CHAR(20),
     PRIMARY KEY(cid)
 );
 
@@ -24,7 +24,7 @@ CREATE mark
     sid INT(10),
     cid INT(10),
     score INT(100),
-    PRIMARY KEY,
+    PRIMARY KEY(mid),
     FOREIGN KEY(sid) REFERENCES student(sid),
     FOREIGN KEY(cid) REFERENCES course(cid)
 );
